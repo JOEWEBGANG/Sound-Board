@@ -15,6 +15,10 @@ sounds.forEach((sound) => {
 
     // add event listener to each button
     btn.addEventListener('click', () => {
+
+        // stop all sounds first
+        stopSounds();
+        // play sound  on click
         document.getElementById(sound).play();
     });
     // add each button to the DOM
@@ -22,13 +26,19 @@ sounds.forEach((sound) => {
 
 });
 
-
-
+// Helper Functions
 function stopSounds() {
+
+    // Loop over all sounds
     sounds.forEach((sound) => {
+
+        // Get sound element
         const song = document.getElementById(sound);
 
+        // Pause the sound
         song.pause();
+
+        // Reset time of sound to 0
         song.currentTime = 0;
     });
 }
