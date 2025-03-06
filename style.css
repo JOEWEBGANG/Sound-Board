@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgb(161, 100, 223);
+  background-color: rgb(0, 0, 0);
   font-family: 'Poppins', sans-serif;
   display: flex;
   flex-wrap: wrap;
@@ -15,11 +15,12 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  flex-direction: column;
 }
 
 .btn {
-  background-color: rebeccapurple;
-  border-radius: 5px;
+  background: linear-gradient(90deg, #ae00ff, #390377);
+  border-radius: 50px;
   border: none;
   color: #fff;
   margin: 1rem;
@@ -27,12 +28,24 @@ body {
   font-size: 1.2rem;
   font-family: inherit;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 30px rgba(235, 1, 137, 0.5); /* Subtle default glow */
 }
 
 .btn:hover {
   opacity: 0.9;
+  box-shadow: 0 0 30px rgba(3, 238, 34, 0.9);
+  transform: translateY(-3px);
 }
 
 .btn:focus {
   outline: none;
+}
+
+.btn:active {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+}
+
+#oiiaGif{
+  display: none;
 }
